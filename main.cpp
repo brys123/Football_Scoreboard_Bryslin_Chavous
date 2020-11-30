@@ -11,12 +11,21 @@ using namespace std;
 
 int main() 
 {
+  
   Scoreboard s;
   Team tOne;
   Team tTwo; 
-  string newName = ""; 
-  string userChoice = ""; 
-  int newScore = 0; 
+  tOne.setName("Cowboys"); //preset data
+  tOne.sethomeCity("Dallas");
+  tOne.setcoachName("McCarley");
+  tTwo.setName("Lakers");
+  tTwo.sethomeCity("LA");
+  tTwo.setcoachName("Marley");
+  
+  string newName = "";
+  string userChoice = "";
+  int newScore = 0;
+  int newTimeout = 0;
 
   //Set the home team 
   tOne.setHomeStatus(true); //tOne is the Home Team now   
@@ -26,7 +35,6 @@ int main()
   s.setVisitor(tTwo); 
 
   //Loop this to make it an interactive menu
-
   do 
   {
       system("clear"); //clear the screen of previous content 
@@ -34,8 +42,10 @@ int main()
       //menu choices 
       cout << "A = Update Home Team Name" << endl; 
       cout << "B = Update Home Team Score" << endl;
-      cout << "C = Update Visitor Team Name" << endl; 
-      cout << "D = Update Visitor Team Score" << endl;  
+      cout << "C = Update Visitor Team Name" << endl;
+      cout << "D = Update Visitor Team Score" << endl;
+      cout << "X = Update Home Timeout Count" << endl;
+      cout << "Y = Update Visitor Timeout Count" << endl;
       cout << "E = Exit" << endl;
       cout << ">"; 
       cin >> userChoice; 
@@ -52,7 +62,7 @@ int main()
       else if(userChoice == "B" || userChoice == "b")
       {
         cout << "\nUpdate Home Score Module****" << endl; 
-        cout << "\nPlease enter a new score for teh home team: "; 
+        cout << "\nPlease enter a new score for the home team: "; 
         cin >> newScore; 
         tOne.setScore(newScore);  //set the new score for tOne        
       }
@@ -67,8 +77,22 @@ int main()
       {
         cout << "\nUpdate Visitor Score Module****" << endl; 
         cout << "\nPlease enter a new score for the visitor team: "; 
-        cin >> newScore; 
+        cin >> newScore;
         tTwo.setScore(newScore);  //set the new score for tTwo        
+      }
+      else if(userChoice == "X" || userChoice == "x")
+      {
+        cout << "\nUpdate Visitor Score Module****" << endl; 
+        cout << "\nPlease enter a new score for the visitor team: "; 
+        cin >> newTimeout;
+        tOne.settimeoutCount(newTimeout);  //set the new score for tTwo        
+      }
+      else if(userChoice == "Y" || userChoice == "y")
+      {
+        cout << "\nUpdate Visitor Score Module****" << endl; 
+        cout << "\nPlease enter a new score for the visitor team: "; 
+        cin >> newTimeout;
+        tTwo.settimeoutCount(newTimeout);  //set the new score for tTwo   
       }
       else if(userChoice == "E" || userChoice == "e")
       {
