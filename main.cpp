@@ -1,5 +1,7 @@
-//Dr. Tyson McMillan a Soccer Scoreboard using 
-//Object Oriented Programming in C++
+//Bryslin Chavous
+//Programming C++ II
+//11/29/2020
+//Dr. Tyson McMillan
 
 #include <iostream>
 #include <string> 
