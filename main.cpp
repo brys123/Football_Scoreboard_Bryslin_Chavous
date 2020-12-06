@@ -1,7 +1,9 @@
 //Bryslin Chavous
 //Programming C++ II
 //11/29/2020
-//Dr. Tyson McMillan
+//Dr. Tyson McMillan - TCCD
+//Create functioning scoreboard
+//I learned about classes and inheritance from this proejct
 
 #include <iostream>
 #include <string> 
